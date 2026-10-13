@@ -22,6 +22,13 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+/* Roboto, self-hosted (variable font, weights 400–900). Subsets: Cyrillic-Extended (Kazakh ә ғ қ ң ө ұ ү һ), Cyrillic, Latin, Latin-Extended. Licence: SIL OFL / Apache 2.0 (Google Fonts). */
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/roboto-cyrillic-ext.woff2') format('woff2'); unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/roboto-cyrillic.woff2') format('woff2'); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/roboto-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('fonts/roboto-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1676,7 +1683,7 @@ html body .page-hero-zakupki h1 { font-size: min(30px, calc((100vw - 48px) * .02
 @media (max-width: 720px) { html body .page-hero h1, html body .page-hero-zakupki h1 { font-size: 22px; white-space: normal; } }
 
 /* page titles: sized so "КОРПОРАТИВТІК ОҚИҒАЛАР ТУРАЛЫ АҚПАРАТ" spans the full content width; longer titles wrap */
-html body .page-hero h1, html body .page-hero-zakupki h1 { font-size: min(45.5px, calc((100vw - 48px) * .0382)); line-height: 1.15; white-space: normal; max-width: none; }
+html body .page-hero h1, html body .page-hero-zakupki h1 { font-size: min(52.6px, calc((100vw - 48px) * .0442)); line-height: 1.15; white-space: normal; max-width: none; }
 @media (max-width: 720px) { html body .page-hero h1, html body .page-hero-zakupki h1 { font-size: 24px; } }
 
 /* procurement sidebar anchors scroll smoothly to the section, below the fixed header */
@@ -1775,3 +1782,8 @@ html { scroll-behavior: smooth; }
 .partner-card-logo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
 .partner-card p { margin: 0; padding: 16px 18px 18px; font-size: 14.5px; font-weight: 700; line-height: 1.4; color: var(--c-ink); text-align: center; background: var(--c-bg-soft); flex: 1; display: flex; align-items: center; justify-content: center; }
 @media (max-width: 520px) { .partner-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .partner-card-logo { height: 110px; padding: 14px; } }
+
+/* Kazakh-safe font stack: Roboto (web font, includes Cyrillic-Extended: ә ғ қ ң ө ұ ү һ) first, then Helvetica/Arial and other system fonts — a missing glyph never falls back to a serif font */
+html body, html body h1, html body h2, html body h3, html body h4, html body h5, html body p, html body li, html body a, html body span, html body div, html body td, html body th, html body dt, html body dd, html body button, html body input, html body textarea, html body select {
+  font-family: Roboto, Helvetica, Arial, 'Segoe UI', 'Noto Sans', 'DejaVu Sans', sans-serif;
+}
