@@ -899,3 +899,12 @@ function kdts_news_per_page( $query ) {
 		$query->set( 'posts_per_page', 12 );
 	}
 }
+
+
+/* preload the Roboto subsets used on every page (Cyrillic, Cyrillic-Extended for Kazakh letters, Latin) */
+add_action( 'wp_head', 'kdts_preload_fonts', 1 );
+function kdts_preload_fonts() {
+	foreach ( array( 'cyrillic', 'cyrillic-ext', 'latin' ) as $subset ) {
+		printf( "<link rel=\"preload\" href=\"%s\" as=\"font\" type=\"font/woff2\" crossorigin>\n", esc_url( get_template_directory_uri() . '/fonts/roboto-' . $subset . '.woff2' ) );
+	}
+}
