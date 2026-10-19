@@ -227,7 +227,7 @@ function Novosti_create_post_type() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		
-		'rewrite' => array('slug' => 'zhanalyktar','with_front' => false),
+		'rewrite' => array('slug' => 'novosti','with_front' => false),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,

@@ -1781,5 +1781,5 @@ html { scroll-behavior: smooth; }
 
 /* Kazakh-safe font stack: Roboto (web font, includes Cyrillic-Extended: ә ғ қ ң ө ұ ү һ) first, then Helvetica/Arial and other system fonts — a missing glyph never falls back to a serif font */
 html body, html body h1, html body h2, html body h3, html body h4, html body h5, html body p, html body li, html body a, html body span, html body div, html body td, html body th, html body dt, html body dd, html body button, html body input, html body textarea, html body select {
-  font-family: Roboto, Helvetica, Arial, 'Segoe UI', 'Noto Sans', 'DejaVu Sans', sans-serif;
+  font-family: Roboto, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, 'Noto Sans', 'DejaVu Sans', system-ui, sans-serif;
 }
